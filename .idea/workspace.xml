@@ -5,26 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4aa2cf5-d292-499c-8543-8bd626b990f9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/TTC-telegram-bot-v2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/callbackqueryhandler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/choose_request.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/get_requests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/handle_photo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/start.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/commands/take_request.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/connection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings/constants.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands/close_request.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/temp_photos/6402642081_23655518-b963-4773-b0e7-d1dc71f61bce.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/callbackqueryhandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/commands/callbackqueryhandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands/take_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/commands/take_request.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings/constants.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +20,21 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Arakasi21"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Arakasi21/TTC-TG-BOT-V2",
+    "accountId": "af24966f-2971-4ebb-8b53-78b17d8fc6c5"
+  }
+}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -47,6 +49,7 @@
   "keyToString": {
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ToolWindowGitHub Copilot Chat.ShowToolbar": "false",
     "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -99,6 +102,7 @@
       <updated>1714374835085</updated>
       <workItem from="1714374837412" duration="176000" />
       <workItem from="1714375036641" duration="9132000" />
+      <workItem from="1714386423754" duration="3087000" />
     </task>
     <servers />
   </component>
@@ -106,6 +110,6 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TTC_telegram_bot_v2$main.coverage" NAME="main Coverage Results" MODIFIED="1714385985939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TTC_telegram_bot_v2$main.coverage" NAME="main Coverage Results" MODIFIED="1714389489276" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

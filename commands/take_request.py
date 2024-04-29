@@ -76,7 +76,7 @@ async def take_request(update: Update, context: CallbackContext) -> int:
                                        text=f"Request {request_id} is now marked as 'In process' and assigned to you.")
 
         if client_id:
-            keyboard = [[InlineKeyboardButton("Start Chat", callback_data=f"chat_{request_id}_{client_id}")]]
+            keyboard = [[InlineKeyboardButton("Start Chat", callback_data="/chat " + str(client_id) + " " + str(request_id))]]
             reply_markup = InlineKeyboardMarkup(keyboard)
             await context.bot.send_message(chat_id=admin_id, text="Press the button below to start a chat with the client.",
                                            reply_markup=reply_markup)

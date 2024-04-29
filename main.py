@@ -2,7 +2,7 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, ConversationHandler, filters, CommandHandler, MessageHandler, \
     CallbackContext, CallbackQueryHandler
 
-from commands.callbackqueryhandler import callback_query_handler
+from commands.callbackqueryhandler import callback_query_handler, close_chat, message_handler, close_request
 from commands.choose_request import choose_request
 from commands.get_requests import get_requests
 from commands.handle_photo import handle_photo, handle_description
@@ -11,7 +11,7 @@ from settings.config import TOKEN
 import logging
 
 from settings.constants import GET_REQUESTS, CHOOSE_REQUEST, TAKE_REQUEST, CLOSE_CHAT, CLOSE_REQUEST, SUBMIT_PHOTO, \
-    SUBMIT_DESCRIPTION
+    SUBMIT_DESCRIPTION, SUBMIT_FEEDBACK
 
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(message)s', level=logging.INFO
@@ -33,9 +33,8 @@ def main(client_handler=None) -> None:
             GET_REQUESTS: [CommandHandler('get_requests', get_requests)],
             CHOOSE_REQUEST: [CommandHandler('choose_request', choose_request)],
             TAKE_REQUEST: [CommandHandler('take_request', take_request)],
-            # CHAT: [CommandHandler('chat', chat)],
-            # CLOSE_CHAT: [CommandHandler('close_chat', close_chat)],
-            # CLOSE_REQUEST: [CommandHandler('close_request', close_request)],
+            CLOSE_CHAT: [CommandHandler('close_chat', close_chat)],
+            CLOSE_REQUEST: [CommandHandler('close_request', close_request)],
         },
         fallbacks=[CommandHandler('cancel', cancel)],
     )
@@ -54,6 +53,9 @@ def main(client_handler=None) -> None:
     application.add_handler(admin_handler)
     application.add_handler(client_handler)
     application.add_handler(CallbackQueryHandler(callback_query_handler))
+    application.add_handler(MessageHandler(filters.TEXT & (~filters.COMMAND), message_handler))
+
+
     application.run_polling()
 
 
