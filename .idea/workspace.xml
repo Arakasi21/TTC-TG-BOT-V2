@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4aa2cf5-d292-499c-8543-8bd626b990f9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/commands/close_request.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/temp_photos/6402642081_23655518-b963-4773-b0e7-d1dc71f61bce.jpg" afterDir="false" />
+    <list default="true" id="a4aa2cf5-d292-499c-8543-8bd626b990f9" name="Changes" comment="refactored">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/temp_photos/6402642081_23d50f0d-73b8-4fe2-8555-b4e82a4c8427.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/temp_photos/6402642081_80ee006c-1c20-46d9-9aac-47a8b151934f.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/temp_photos/6402642081_8a41dd1f-ae7a-43eb-8463-07daa72ca57a.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/callbackqueryhandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/commands/callbackqueryhandler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/take_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/commands/take_request.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings/constants.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,18 +22,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Arakasi21"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Arakasi21&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Arakasi21/TTC-TG-BOT-V2",
-    "accountId": "af24966f-2971-4ebb-8b53-78b17d8fc6c5"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Arakasi21/TTC-TG-BOT-V2&quot;,
+    &quot;accountId&quot;: &quot;af24966f-2971-4ebb-8b53-78b17d8fc6c5&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -45,20 +46,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "ToolWindowGitHub Copilot Chat.ShowToolbar": "false",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ToolWindowGitHub Copilot Chat.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="TTC-telegram-bot-v2" />
@@ -102,12 +103,26 @@
       <updated>1714374835085</updated>
       <workItem from="1714374837412" duration="176000" />
       <workItem from="1714375036641" duration="9132000" />
-      <workItem from="1714386423754" duration="3087000" />
+      <workItem from="1714386423754" duration="3116000" />
+      <workItem from="1714454531397" duration="1571000" />
     </task>
+    <task id="LOCAL-00001" summary="refactored">
+      <option name="closed" value="true" />
+      <created>1714389567035</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1714389567035</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TTC_telegram_bot_v2$main.coverage" NAME="main Coverage Results" MODIFIED="1714389489276" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
