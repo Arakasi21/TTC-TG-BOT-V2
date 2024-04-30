@@ -8,6 +8,7 @@ from commands.choose_request import choose_request
 from commands.close_request import close_request
 from commands.get_requests import get_requests
 from commands.handle_photo import handle_photo, handle_description
+from commands.start import start
 from commands.take_request import take_request
 from settings.config import TOKEN
 import logging
@@ -25,12 +26,15 @@ logger = logging.getLogger(__name__)
 async def cancel(update: Update, context: CallbackContext) -> int:
     await update.message.reply_text("Вы завершили request cycle")
     return ConversationHandler.END
-def main(client_handler=None) -> None:
+
+def main() -> None:
     application = ApplicationBuilder().token(TOKEN).build()
+
+    start_handler = CommandHandler('start', start)
 
     # Admin conversation handler
     admin_handler = ConversationHandler(
-        entry_points=[CommandHandler('start', get_requests)],
+        entry_points=[CommandHandler('get_requests', get_requests)],
         states={
             GET_REQUESTS: [CommandHandler('get_requests', get_requests)],
             CHOOSE_REQUEST: [CommandHandler('choose_request', choose_request)],
@@ -52,14 +56,15 @@ def main(client_handler=None) -> None:
         fallbacks=[CommandHandler("cancel", cancel)],
     )
 
+    application.add_handler(start_handler)
+
     application.add_handler(admin_handler)
     application.add_handler(client_handler)
+
     application.add_handler(CallbackQueryHandler(callback_query_handler))
     application.add_handler(MessageHandler(filters.TEXT & (~filters.COMMAND), message_handler))
 
-
     application.run_polling()
-
 
 if __name__ == "__main__":
     import asyncio

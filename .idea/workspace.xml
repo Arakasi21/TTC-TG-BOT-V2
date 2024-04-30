@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4aa2cf5-d292-499c-8543-8bd626b990f9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/commands/chat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/temp_photos/6402642081_23d50f0d-73b8-4fe2-8555-b4e82a4c8427.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/temp_photos/6402642081_80ee006c-1c20-46d9-9aac-47a8b151934f.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/temp_photos/6402642081_8a41dd1f-ae7a-43eb-8463-07daa72ca57a.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="a4aa2cf5-d292-499c-8543-8bd626b990f9" name="Changes" comment="fixes of v2 (removed button and text)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commands/callbackqueryhandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/commands/callbackqueryhandler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/choose_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/commands/choose_request.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands/get_requests.py" beforeDir="false" afterPath="$PROJECT_DIR$/commands/get_requests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commands/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/commands/start.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commands/take_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/commands/take_request.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
@@ -108,7 +101,7 @@
       <workItem from="1714374837412" duration="176000" />
       <workItem from="1714375036641" duration="9132000" />
       <workItem from="1714386423754" duration="3116000" />
-      <workItem from="1714454531397" duration="6932000" />
+      <workItem from="1714454531397" duration="9069000" />
     </task>
     <task id="LOCAL-00001" summary="refactored">
       <option name="closed" value="true" />
@@ -126,7 +119,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714456175051</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fixes of v2 (removed button and text)">
+      <option name="closed" value="true" />
+      <created>1714461641736</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714461641736</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,9 +136,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="refactored" />
     <MESSAGE value="refactored /" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored /" />
+    <MESSAGE value="fixes of v2 (removed button and text)" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes of v2 (removed button and text)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TTC_telegram_bot_v2$main.coverage" NAME="main Coverage Results" MODIFIED="1714461513108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TTC_telegram_bot_v2$main.coverage" NAME="main Coverage Results" MODIFIED="1714463117067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

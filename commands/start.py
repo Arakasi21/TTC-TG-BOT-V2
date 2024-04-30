@@ -8,8 +8,6 @@ logger = logging.getLogger(__name__)
 
 async def start(update: Update, context: CallbackContext) -> None:
     # TODO remove this line
-    await context.bot.set_my_commands([])
-
 
     user_id = update.effective_chat.id
     connection = connect_to_db()
@@ -19,6 +17,7 @@ async def start(update: Update, context: CallbackContext) -> None:
         return
 
     try:
+        await context.bot.set_my_commands([])
         cursor = connection.cursor()
         cursor.execute("SELECT phone_number FROM Clients WHERE client_id = %s", (user_id,))
         user = cursor.fetchone()
