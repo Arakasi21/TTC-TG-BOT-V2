@@ -11,7 +11,6 @@ from settings.constants import CLOSE_CHAT
 logger = logging.getLogger(__name__)
 
 async def take_request(update: Update, context: CallbackContext) -> int:
-
     if 'choose_option_message_id' in context.user_data:
         try:
             await context.bot.delete_message(chat_id=update.effective_chat.id,

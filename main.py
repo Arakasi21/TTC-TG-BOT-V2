@@ -3,7 +3,7 @@ from telegram.ext import ApplicationBuilder, ConversationHandler, filters, Comma
     CallbackContext, CallbackQueryHandler
 
 from commands.callbackqueryhandler import callback_query_handler
-from commands.chat import close_chat, message_handler
+from commands.chat import close_chat, message_handler, handle_feedback
 from commands.choose_request import choose_request
 from commands.close_request import close_request
 from commands.get_requests import get_requests
@@ -34,7 +34,7 @@ def main() -> None:
 
     # Admin conversation handler
     admin_handler = ConversationHandler(
-        entry_points=[CommandHandler('get_requests', get_requests)],
+        entry_points=[CommandHandler('Requests', get_requests)],
         states={
             GET_REQUESTS: [CommandHandler('get_requests', get_requests)],
             CHOOSE_REQUEST: [CommandHandler('choose_request', choose_request)],
@@ -51,7 +51,8 @@ def main() -> None:
         states={
             SUBMIT_PHOTO: [MessageHandler(filters.PHOTO, handle_photo)],
             SUBMIT_DESCRIPTION: [MessageHandler(filters.TEXT, handle_description)],
-            # SUBMIT_FEEDBACK: [MessageHandler(filters.TEXT, handle_feedback)],
+            # TODO redo this
+            SUBMIT_FEEDBACK: [MessageHandler(filters.TEXT, handle_feedback)],
         },
         fallbacks=[CommandHandler("cancel", cancel)],
     )
