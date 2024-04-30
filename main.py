@@ -2,8 +2,10 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, ConversationHandler, filters, CommandHandler, MessageHandler, \
     CallbackContext, CallbackQueryHandler
 
-from commands.callbackqueryhandler import callback_query_handler, close_chat, message_handler, close_request
+from commands.callbackqueryhandler import callback_query_handler
+from commands.chat import close_chat, message_handler
 from commands.choose_request import choose_request
+from commands.close_request import close_request
 from commands.get_requests import get_requests
 from commands.handle_photo import handle_photo, handle_description
 from commands.take_request import take_request

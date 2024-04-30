@@ -6,6 +6,7 @@ from database.connection import connect_to_db
 logger = logging.getLogger(__name__)
 
 async def choose_request(update: Update, context: CallbackContext) -> int:
+
     logger.info("choose_request function called")
     query: CallbackQuery = update.callback_query
     request_id = query.data.split()[1]  # get the request_id from the callback_data
@@ -26,10 +27,16 @@ async def choose_request(update: Update, context: CallbackContext) -> int:
             logger.warning(f"Request not found for ID: {request_id}")
             await context.bot.send_message(chat_id=update.effective_chat.id, text="Request not found.")
         else:
-            request_details = f"Request ID: {row[0]}\nStatus: {row[1]}\nProblem: {row[2]}"
+            request_details = f"Request ID: {row[0]}\nStatus: {row[4]}\nProblem: {row[6]}"
+            photo_url = row[2]
+            if photo_url:
+                message = await context.bot.send_photo(chat_id=update.effective_chat.id, photo=photo_url)
+                context.user_data['photo_message_id'] = message.message_id
+
 
             logger.info(f"Request details: {request_details}")
-            await context.bot.send_message(chat_id=update.effective_chat.id, text=request_details)
+            message = await context.bot.send_message(chat_id=update.effective_chat.id, text=request_details)
+            context.user_data['request_details_message_id'] = message.message_id
 
             # Add inline keyboard with options to get back to get_requests or take request
             keyboard = [
@@ -37,7 +44,9 @@ async def choose_request(update: Update, context: CallbackContext) -> int:
                  InlineKeyboardButton('Take Request', callback_data='/take_request ' + request_id)]
             ]
             reply_markup = InlineKeyboardMarkup(keyboard)
-            await context.bot.send_message(chat_id=update.effective_chat.id, text="Choose an option:", reply_markup=reply_markup)
+            message = await context.bot.send_message(chat_id=update.effective_chat.id, text="Choose an option:",
+                                                     reply_markup=reply_markup)
+            context.user_data['choose_option_message_id'] = message.message_id
 
     except Exception as e:
         logger.error(f"Error with fetching request: {e}")

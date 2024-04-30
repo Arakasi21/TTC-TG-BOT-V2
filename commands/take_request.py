@@ -11,6 +11,28 @@ from settings.constants import CLOSE_CHAT
 logger = logging.getLogger(__name__)
 
 async def take_request(update: Update, context: CallbackContext) -> int:
+    if 'choose_option_message_id' in context.user_data:
+        try:
+            await context.bot.delete_message(chat_id=update.effective_chat.id,
+                                             message_id=context.user_data['choose_option_message_id'])
+            del context.user_data['choose_option_message_id']
+        except Exception as e:
+            logger.error(f"Error deleting message: {e}")
+    if 'request_details_message_id' in context.user_data:
+        try:
+            await context.bot.delete_message(chat_id=update.effective_chat.id,
+                                             message_id=context.user_data['request_details_message_id'])
+            del context.user_data['request_details_message_id']
+        except Exception as e:
+            logger.error(f"Error deleting message: {e}")
+
+    if 'photo_message_id' in context.user_data:
+        try:
+            await context.bot.delete_message(chat_id=update.effective_chat.id,
+                                             message_id=context.user_data['photo_message_id'])
+            del context.user_data['photo_message_id']
+        except Exception as e:
+            logger.error(f"Error deleting message: {e}")
     logger.info("take_request function called")
     user_id = update.effective_chat.id
     admin_id = 577163143  # replace with actual admin_id

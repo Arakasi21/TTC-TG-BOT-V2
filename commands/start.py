@@ -7,6 +7,10 @@ from database.connection import connect_to_db
 logger = logging.getLogger(__name__)
 
 async def start(update: Update, context: CallbackContext) -> None:
+    # TODO remove this line
+    await context.bot.set_my_commands([])
+
+
     user_id = update.effective_chat.id
     connection = connect_to_db()
 
